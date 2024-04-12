@@ -1,0 +1,60 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    font-family: "cairo", sans-serif;
+}
+.page{
+    height: 100vh;
+}
+.page::before{
+    content: "";
+    position: fixed;
+    width: 300%;
+    height: 100%;
+    background-color: #0075ff;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) skew(0, -10deg);
+    border-radius: 50%;
+    z-index: -1;
+    animation: waving 3s ease-in-out infinite alternate;
+}
+.card{
+    width: 300px;
+    padding: 20px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background-color: white;
+    border-radius: 10%;
+    box-shadow: 0 0 10px #ddd inset;
+}
+.card .imge {
+    max-width: 100%;
+    border-radius: 10%;
+    width:"270px" ;
+    height:"300px" ;
+}
+.card h2{
+    margin: 0;
+    line-height: 1;
+}
+.card p {
+    margin: 0;
+}
+@keyframes waving {
+    from{
+        transform: translateX(-50%) skew(0, -10deg);
+    }
+    to{
+        transform: translateX(-30%) skew(10deg, 0);
+    }
+}
+p {
+    color: black;
+    font-weight: bold;
+}
